@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="id.prasetiyo.RestClient.FetchGithubActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:gravity="left|center"
+        android:hint="Username"
+        android:layout_toLeftOf="@+id/btn_start_fetch"
+        android:id="@+id/txt_user_github"
+        android:layout_alignParentStart="true"
+        android:inputType="text"
+        android:lines="1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:gravity="left|center"
+        android:layout_alignParentEnd="true"
+        android:text="Fetch"
+        android:textAlignment="center"
+        android:id="@+id/btn_start_fetch" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_start_fetch"
+        android:id="@+id/linear_1"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/imageView_profile"
+            android:layout_marginRight="10dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="aoktox"
+                android:id="@+id/txt_nama_user"
+                android:minHeight="40dp"
+                android:gravity="left|center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="https://api.github.com/users/aoktox"
+                android:id="@+id/txt_url_user"
+                android:layout_marginRight="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linear_1"
+        android:id="@+id/listView_github" />
+</RelativeLayout>
